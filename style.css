@@ -1,0 +1,137 @@
+body{
+    background-color: rgb(17, 17, 17);
+}
+
+.planet{
+    position: absolute;
+    bottom: 0;
+    width: 98vw;
+    height: 30vh;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    box-shadow: 0 0 30vh 10vh rgb(243, 243, 59);
+    background: linear-gradient(to right , blue , blue 33.33% , rgb(8, 145, 8) 33.33% , rgb(8, 145, 8) 66.66%, blue 33.33%);
+    animation-name: planet-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes planet-animation{
+    0% {background: linear-gradient(to right , rgb(124, 218, 124) , rgb(124, 218, 124) 33.33% , rgb(8, 145, 8) 53.33% , rgb(8, 145, 8) 66.66%, rgb(124, 218, 124) 86.66%);}
+    10% {background: linear-gradient(to right , rgb(97, 214, 97) , rgb(124, 218, 124) 25% , rgb(8, 145, 8) 45% , rgb(8, 145, 8) 58.33% , rgb(124, 218, 124) 78.33% , rgb(124, 218, 124) 91.66% , rgb(8, 145, 8) 100%);}
+    20% {background: linear-gradient(to right , rgb(124, 218, 124) , rgb(124, 218, 124) 18% , rgb(8, 145, 8) 38% , rgb(8, 145, 8) 51.33% , rgb(124, 218, 124) 71.33% , rgb(124, 218, 124) 84.66% , rgb(8, 145, 8) 100%);}
+    30% {background: linear-gradient(to right , rgb(124, 218, 124) , rgb(124, 218, 124) 12% , rgb(8, 145, 8) 32% , rgb(8, 145, 8) 45.33% , rgb(124, 218, 124) 65.33% , rgb(124, 218, 124) 78.66% , rgb(8, 145, 8) 100%);}
+    40% {background: linear-gradient(to right , rgb(124, 218, 124) , rgb(124, 218, 124) 6% , rgb(8, 145, 8) 26% , rgb(8, 145, 8) 39.33% , rgb(124, 218, 124) 59.33% , rgb(124, 218, 124) 72.66% , rgb(8, 145, 8) 100%);}
+    50% {background: linear-gradient(to right , rgb(8, 145, 8)  , rgb(8, 145, 8) 33.33% , rgb(124, 218, 124) 53.33% , rgb(124, 218, 124) 66.66% , rgb(8, 145, 8) 86.66%);}
+    60% {background: linear-gradient(to right , rgb(8, 145, 8) , rgb(8, 145, 8) 25% , rgb(124, 218, 124) 45% , rgb(124, 218, 124) 58.33% , rgb(8, 145, 8) 78.33% , rgb(8, 145, 8) 91.66% , rgb(124, 218, 124) 100%);}
+    70% {background: linear-gradient(to right , rgb(8, 145, 8) , rgb(8, 145, 8) 18% , rgb(124, 218, 124) 28% , rgb(124, 218, 124) 51.33% , rgb(8, 145, 8) 71.33% , rgb(8, 145, 8) 84.66% , rgb(124, 218, 124) 100%);}
+    80% {background: linear-gradient(to right , rgb(8, 145, 8) , rgb(8, 145, 8) 12% , rgb(124, 218, 124) 22% , rgb(124, 218, 124) 45.33% , rgb(8, 145, 8) 65.33% , rgb(8, 145, 8) 78.66% , rgb(124, 218, 124) 100%);}
+    90% {background: linear-gradient(to right , rgb(8, 145, 8) , rgb(8, 145, 8) 6% , rgb(124, 218, 124) 26% , rgb(124, 218, 124) 39.33% , rgb(8, 145, 8) 59.33% , rgb(8, 145, 8) 72.66% , rgb(124, 218, 124) 100%);}
+    100% {background: linear-gradient(to right , rgb(124, 218, 124) , rgb(124, 218, 124) 33.33% , rgb(8, 145, 8) 53.33% , rgb(8, 145, 8) 66.66%, rgb(124, 218, 124) 86.66%);}
+}
+
+.ball{
+    position: absolute;
+    bottom: 30vh;
+    left: calc(50% - 30px);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: linear-gradient(to right , red , red 60% , rgb(240, 129, 129) 90%);
+    animation-name: ball-animation;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ball-animation{
+    0% {transform: rotate(0deg);}
+    10% {transform: rotate(36deg);}
+    20% {transform: rotate(72deg);}
+    30% {transform: rotate(108deg);}
+    40% {transform: rotate(144deg);}
+    50% {transform: rotate(180deg);}
+    60% {transform: rotate(216deg);}
+    70% {transform: rotate(252deg);}
+    80% {transform: rotate(288deg);}
+    90% {transform: rotate(324deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.gb{
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    background-color: gray;
+    color: white;
+    left: calc(85vw);
+}
+
+::placeholder{
+    color: white;
+    padding-left: 5px;
+}
+
+.apply{
+    position: absolute;
+    left: calc(85vw + 110px + 5px);
+    background-color: gray;
+    height: 32px;
+    width: 50px;
+    color: white;
+    transition: 1s;
+}
+.apply:hover{
+    background-color: white;
+    color: gray;
+}
+
+.jump{
+    position: absolute;
+    top: 90vh;
+    height: 40px;
+    width: 70px;
+    left: calc(50vw - 35px);
+    font-size: 20px;
+    background-color: rgb(50, 50, 238);
+    color: rgb(245, 221, 84);
+    border-radius: 15%;
+    transition: 1s;
+}
+
+.jump:hover{
+    height: 45px;
+    width: 75px;
+    background-color: rgb(245, 221, 84);
+    color: rgb(50, 50, 238);
+    border-radius: 15%;
+    left: calc(50vw - 38px);
+}
+
+p{
+    position: absolute;
+    display: none;
+    top: 10vh;
+    left: 25vw;
+    font-size: 20px;
+    color: rgb(238, 238, 52);
+}
+
+.hide{
+    display: grid;
+}
+.s1,.s2,.s3{
+    width: 45vw;
+    position: absolute;
+}
+.p0{
+    left: 30vw;
+}
+
+span{
+    position: absolute;
+}
+.sl1 , .sl2 , .sl3{
+    width: 50vw;
+}
